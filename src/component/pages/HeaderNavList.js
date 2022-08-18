@@ -10,7 +10,7 @@ function HeaderNavList(props) {
   };
 
   let activeClassName = "underline";
-  console.log('HeaderNavList:',header_menu)
+//   console.log('HeaderNavList:',header_menu)
   return (
     <nav className="HeaderNavList">
       <ul>
@@ -31,7 +31,6 @@ function HeaderNavList(props) {
             isActive ? activeStyle : undefined
           }
             className={({ isActive }) => {
-                console.log("about:",isActive)
               return isActive ? activeClassName : undefined}
             }
           >

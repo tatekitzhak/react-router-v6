@@ -6,10 +6,6 @@ ul {
     background-color: #333333;
   }
   
-  li {
-    float: left;
-  }
-  
   li a {
     display: block;
     color: white;
@@ -20,4 +16,10 @@ ul {
   
   li a:hover {
     background-color: #111111;
+  }
+  header{
+    display: inline-flex;
+  }
+  div.sidebar{
+    display: table-caption;
   }

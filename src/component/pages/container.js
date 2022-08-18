@@ -7,12 +7,12 @@ import Footer from '@/component/pages/footer';
 
 function Container(props) {
     return (
-        <div>
+        <>
             <Header></Header>
             <Main></Main>
             <SideBar></SideBar>
             <Footer></Footer>
-        </div>
+        </>
     );
 }
 

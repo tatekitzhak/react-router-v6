@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Routes, Route, Link, NavLink, Outlet } from 'react-router-dom';
+import { Routes, Route, Link, NavLink, Outlet, useParams } from 'react-router-dom';
 import { header_menu } from '@/utils/menu';
-import HeaderNavList from '@/component/pages/HeaderNavList';
+import HeaderNavList from '@/component/headerBarMenu/HeaderNavList';
+import SideBarNavList from '@/component/sideBarMenu/SideBarNavList'
 
 function Home(props) {
     return (
@@ -18,14 +19,10 @@ function About(props) {
         </div>
     );
 }
-function Topics(props) {
-    return (
-        <div>
-            Topics
-        </div>
-    );
-}
+
 function Contact(props) {
+    let params = useParams();
+    console.log("Contact:",params)
     return (
         <div>
             Contact Us
@@ -39,24 +36,38 @@ function NotFound(props) {
         </div>
     );
 }
- 
-
-function Header(props) {
-    
+function Topic(props) {
+    let params = useParams();
+    console.log("Topic:",props)
     return (
         <div>
-            <HeaderNavList>
-            Header
-            </HeaderNavList>
-            
-            <Routes>
-                <Route path='/' element={<Home/>} />
-                <Route path='/about' element={<About/>} />
-                <Route path='/topics' element={<Topics/>} />
-                <Route path='/contact' element={<Contact/>} />
-                <Route path='*' element={<NotFound/>} />
-            </Routes>
+            Topic
+            <Outlet/>
         </div>
+    );
+}
+
+
+function Header(props) {
+
+    return (
+        <>
+            <HeaderNavList>
+                Header
+            </HeaderNavList>
+
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='about' element={<About />} />
+                <Route path='topics' element={<SideBarNavList />} >
+                    <Route path="topic1" element={<Topic path={'topic1'}/>} />
+                    <Route path="topic2" element={<Topic path={'topic2'}/>} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
+                <Route path='/contact' element={<Contact />} />
+                <Route path='*' element={<NotFound />} />
+            </Routes>
+        </>
     );
 }
 
