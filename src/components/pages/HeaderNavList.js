@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import { header_menu } from '@/utils/menu';
+import { header_menu } from '@/utils/menus';
 
 function HeaderNavList(props) {
     // This styling will be applied to a <NavLink> when the

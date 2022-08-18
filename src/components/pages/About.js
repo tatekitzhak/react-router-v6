@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SideBar(props) {
+function About(props) {
     return (
         <div>
             SideBar
@@ -8,4 +8,4 @@ function SideBar(props) {
     );
 }
 
-export default SideBar;
+export default About;

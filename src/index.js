@@ -2,7 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "@/App";
-import Container from "@/component/pages/container";
+import Container from "@/components/pages/container";
 // Test import of a JavaScript module
 import { example } from '@/js/example'
 
