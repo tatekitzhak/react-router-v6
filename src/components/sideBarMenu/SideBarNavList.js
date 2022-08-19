@@ -15,7 +15,7 @@ function SideBarNavList(props) {
     let activeClassName = "underline";
     return (
         <div className="sidebar">
-            <div>
+            <div style={{backgroundColor: '#0D284F', color: 'white'}} >
                 <ul>
                     <li>
                         <NavLink
@@ -47,7 +47,7 @@ function SideBarNavList(props) {
                 </ul>
             </div>
 
-            <main>
+            <main style={{margin: '0 auto'}}>
                 <Outlet />
             </main>
         </div>

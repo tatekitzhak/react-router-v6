@@ -14,7 +14,7 @@ function HeaderNavList(props) {
   function navList() {
     return header_menu.map((list, key) => {
       return (
-        <nav key={key} className="HeaderNavList">
+        <nav key={key} style={{backgroundColor: '#0D284F', color: 'white'}} className="HeaderNavList">
           <ul>
             <li className="navAside">
               <NavLink

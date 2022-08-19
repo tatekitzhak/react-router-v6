@@ -1,16 +1,10 @@
 import React from 'react';
 import HeaderNavList from '@/components/headerBarMenu/HeaderNavList';
 
-// function Footer(props) {
-//     return (
-//         <div style={{backgroundColor: '#385071', color: 'white'}} >
-//             <p>Footer</p>
-//             <HeaderNavList>
-//                 Header
-//             </HeaderNavList>
-//         </div>
-//     );
-// }
+/**
+ * 
+ * https://javascript.tutorialink.com/export-default-and-multiple-child-components/
+ */
 
 const Layout = (props) => {
     return <div className="layout ">{props.children}</div>;
@@ -41,6 +35,3 @@ const Layout = (props) => {
   Layout.Footer = Footer;
   
 export default Layout;
-  
-
-// export default Footer;

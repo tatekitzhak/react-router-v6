@@ -9,7 +9,8 @@ import About from '@/components/pages/About';
 import Contact from '@/components/pages/Contact';
 import TopicsList from '@/components/pages/TopicsList';
 import NotFound from '@/components/pages/NotFound';
-import Footer from './components/pages/footer';
+//import Footer from './components/pages/footer';
+import Layout from '@/components/pages/Layout';
 
 
 function Topic(props) {
@@ -69,7 +70,10 @@ function App(props) {
                     <Route path={":path"} element={<NotFound />} />
                 </Route>
             </Routes>
-            <Footer/>
+            <Layout>
+              <Layout.Footer>...</Layout.Footer>
+            </Layout>
+            
         </>
     );
 }
