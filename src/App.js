@@ -7,6 +7,7 @@ import SideBarNavList from '@/components/sideBarMenu/SideBarNavList'
 import Home from '@/components/pages/home';
 import About from '@/components/pages/About';
 import Contact from '@/components/pages/Contact';
+import TopicsList from '@/components/pages/TopicsList';
 import NotFound from '@/components/pages/NotFound';
 import Footer from './components/pages/footer';
 
@@ -21,28 +22,6 @@ function Topic(props) {
         </div>
     );
 }
-function Topics(props) {
-    console.log("Topics List:", props)
-    function navList() {
-        return props.data.map((list, key) => {
-          return (
-            <nav key={key} >
-              <ul>
-                <li >
-                    {list.title}
-                 
-                </li>
-              </ul>
-            </nav>)
-        })
-      }
-    return (
-      <div>
-          {props.path}
-          {navList()}
-      </div>
-    );
-  }
 
 
 function App(props) {
@@ -66,7 +45,6 @@ function App(props) {
             <HeaderNavList>
                 Header
             </HeaderNavList>
-
             <Routes>
                  {/* Routes for Header Nav Bar List (Routes for everyone ) */}
                 <Route path={'/'} element={<Home />} />
@@ -85,13 +63,11 @@ function App(props) {
                         } > 
                          {/* <NotFound pageNotFound={"page Not Found"} /> */}
 
-                    <Route index element={<Topics data={ sidebar_menu }  path={'Topic List'}/>} />
+                    <Route index element={<TopicsList data={ sidebar_menu }  path={'Topic List'}/>} />
                     <Route path="topic1" element={<Topic path={'Topic 1'}/>} />
                     <Route path="topic2" element={<Topic path={'Topic 2'}/>} />
                     <Route path={":path"} element={<NotFound />} />
                 </Route>
-               
-                
             </Routes>
             <Footer/>
         </>
