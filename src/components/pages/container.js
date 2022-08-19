@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '@/components/pages/header';
+import App from '@/components/pages/App';
 import Footer from '@/components/pages/footer';
 
 
 function Container(props) {
     return (
         <>
-            <Header></Header>
+            <App></App>
             
             <Footer></Footer>
         </>

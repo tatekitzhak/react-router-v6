@@ -47,7 +47,9 @@ function SideBarNavList(props) {
                 </ul>
             </div>
 
-            <Outlet />
+            <main>
+                <Outlet />
+            </main>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import React from 'react';
 function About(props) {
     return (
         <div>
-            SideBar
+            About
         </div>
     );
 }

@@ -8,7 +8,6 @@ import Home from '@/components/pages/home';
 import About from '@/components/pages/About';
 import Contact from '@/components/pages/Contact';
 import NotFound from '@/components/pages/NotFound';
-import Footer from './components/pages/footer';
 
 
 function Topic(props) {
@@ -93,7 +92,6 @@ function App(props) {
                
                 
             </Routes>
-            <Footer/>
         </>
     );
 }

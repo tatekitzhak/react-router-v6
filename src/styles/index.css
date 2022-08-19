@@ -20,6 +20,6 @@ ul {
   header{
     display: inline-flex;
   }
-  div.sidebar{
-    display: table-caption;
+  div.sidebar{   
+    display: flex;
   }
