@@ -3,3 +3,40 @@ $font-family: 'Inter', sans-serif;
 $background-color: #121212;
 $font-color: #dae0e0;
 $page-width: 650px;
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-bar {
+    font-size: 20px;
+    font-family: arial;
+    margin: 50px;
+    background-color: #d75d77;
+    border: 5px solid pink;
+  }
+  
+  .nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-bar ul li {
+    display: inline-block;
+    margin-right: 1em;
+    -webkit-transition: border 1s, border-radius 1s, padding 1s,
+      background-color 1s, color 1s;
+    transition: border 1s, border-radius 1s, padding 1s, background-color 1s,
+      color 1s;
+  }
+  
+  .nav-bar ul li:hover {
+    border-bottom: 2px solid gray;
+    border-radius: 10%;
+    padding: 10px;
+    background-color: #e91e63;
+    color: white;
+  }
+  
