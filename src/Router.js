@@ -25,7 +25,7 @@ function Topic(props) {
 }
 
 
-function App(props) {
+function Router(props) {
     const [menu, setMenu] = useState(null);
 
     useEffect(() => {
@@ -73,9 +73,8 @@ function App(props) {
             <Layout>
               <Layout.Footer>...</Layout.Footer>
             </Layout>
-            
         </>
     );
 }
 
-export default App;
+export default Router;

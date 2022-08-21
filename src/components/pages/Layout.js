@@ -33,5 +33,5 @@ const Layout = (props) => {
   Layout.Header = Header;
   Layout.Body = Body;
   Layout.Footer = Footer;
-  
+  {console.log("Layout:",{Layout},Object.entries(Layout))}
 export default Layout;
