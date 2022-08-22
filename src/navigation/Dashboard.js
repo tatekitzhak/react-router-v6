@@ -1,18 +1,18 @@
 import React from "react";
-import { Routes, Link, Route, useParams, useNavigate } from "react-router-dom";
+import { Routes, NavLink, Route, useParams, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   return (
     <div>
       <ul>
         <li>
-          <Link to="">Profile</Link>
+          <NavLink to="">Profile</NavLink>
         </li>
         <li>
-          <Link to="orders">Orders</Link>
+          <NavLink to="orders">Orders</NavLink>
         </li>
         <li>
-          <Link to="quotes">Quotes</Link>
+          <NavLink to="quotes">Quotes</NavLink>
         </li>
       </ul>
       <div className="dashboard">
@@ -39,9 +39,9 @@ export const Orders = () => {
         {orderIds.map((orderId) => {
           return (
             <li key={orderId}>
-              <Link to={`/dashboard/order_details/${orderId}`}>
+              <NavLink to={`/dashboard/order_details/${orderId}`}>
                 View Order {orderId}
-              </Link>
+              </NavLink>
             </li>
           );
         })}

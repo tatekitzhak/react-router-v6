@@ -1,6 +1,6 @@
 import loadable from "@loadable/component";
 import React from "react";
-import { NavLink as Link, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import Invoices, { Invoice } from "./Invoices";
 import RouteAsObj from "./RouteAsObj";
 import Search from "./Search";
@@ -19,39 +19,39 @@ function Router() {
       <nav>
         <ul>
           <li>
-            <Link to="/" activeClassName="active" end>
+            <NavLink to="/" end>
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/dashboard" activeClassName="active">
+            <NavLink to="/dashboard">
               Dashboard
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" activeClassName="active">
+            <NavLink to="/about">
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/object_route" activeClassName="active">
+            <NavLink to="/object_route">
               Route as Object
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/search" activeClassName="active">
+            <NavLink to="/search">
               Search
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/public" activeClassName="active">
+            <NavLink to="/public">
               Public Page
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/invoices" activeClassName="active">
+            <NavLink to="/invoices">
               Invoices
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Outlet, useParams } from "react-router-dom";
+import { NavLink, Outlet, useParams } from "react-router-dom";
 
 export const Invoices = () => {
   const invoiceIds = ["50001", "50002", "50003"];
@@ -10,9 +10,9 @@ export const Invoices = () => {
         {invoiceIds.map((invoiceId) => {
           return (
             <li key={invoiceId}>
-              <Link to={`/invoices/${invoiceId}`}>
+              <NavLink to={`/invoices/${invoiceId}`}>
                 View Invoice {invoiceId}
-              </Link>
+              </NavLink>
             </li>
           );
         })}

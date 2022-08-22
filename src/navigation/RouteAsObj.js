@@ -1,6 +1,6 @@
 import React from "react";
 import { useRoutes, Outlet } from "react-router";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const RouteAsObj = () => {
   let element = useRoutes([
@@ -21,13 +21,13 @@ const RouteAsObj = () => {
     <div>
       <ul>
         <li>
-          <Link to="">Route1</Link>
+          <NavLink to="">Route1</NavLink>
         </li>
         <li>
-          <Link to="route2">Route2</Link>
+          <NavLink to="route2">Route2</NavLink>
         </li>
         <li>
-          <Link to="route3">Route3</Link>
+          <NavLink to="route3">Route3</NavLink>
         </li>
       </ul>
       {element}
@@ -43,10 +43,10 @@ const Route3 = () => {
       <h1>Route3</h1>
       <ul>
         <li>
-          <Link to="child1">Child1</Link>
+          <NavLink to="child1">Child1</NavLink>
         </li>
         <li>
-          <Link to="child2">Child2</Link>
+          <NavLink to="child2">Child2</NavLink>
         </li>
       </ul>
       <Outlet />
