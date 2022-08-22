@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Outlet, useParams } from "react-router-dom";
 
-export const Invoices = () => {
+export function Invoices(){
   const invoiceIds = ["50001", "50002", "50003"];
   return (
     <>
@@ -22,7 +22,7 @@ export const Invoices = () => {
   );
 };
 
-export const Invoice = () => {
+export function Invoice(){
   const params = useParams();
 
   return (

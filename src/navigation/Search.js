@@ -7,7 +7,7 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-const Search = () => {
+function Search(){
   const query = useQuery();
 
   const term = query.get("term");

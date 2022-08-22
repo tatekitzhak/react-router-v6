@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, NavLink, Route, useParams, useNavigate } from "react-router-dom";
 
-const Dashboard = () => {
+function Dashboard(){
   return (
     <div>
       <ul>
         <li>
-          <NavLink to="">Profile</NavLink>
+          <NavLink to="profile">Profile</NavLink>
         </li>
         <li>
           <NavLink to="orders">Orders</NavLink>
@@ -17,7 +17,7 @@ const Dashboard = () => {
       </ul>
       <div className="dashboard">
         <Routes>
-          <Route path="/" element={<Profile />}></Route>
+          <Route path="/profile" element={<Profile />}></Route>
           <Route path="orders" element={<Orders />}></Route>
           <Route path="quotes" element={<Quotes />}></Route>
           <Route path="order_details/:orderId" element={<OrderDetails />} />
@@ -27,10 +27,11 @@ const Dashboard = () => {
   );
 };
 
-export const Profile = () => {
+export function Profile(){
   return <h2>Profile</h2>;
 };
-export const Orders = () => {
+
+export function Orders(){
   const orderIds = ["10001", "10002", "10003"];
   return (
     <>
@@ -49,10 +50,11 @@ export const Orders = () => {
     </>
   );
 };
-export const Quotes = () => {
+
+export function Quotes(){
   return <h2>Quotes</h2>;
 };
-export const OrderDetails = () => {
+export function OrderDetails(){
   const params = useParams();
   const navigate = useNavigate();
 
