@@ -17,7 +17,7 @@ function Dashboard(){
       </ul>
       <div className="dashboard">
         <Routes>
-          <Route path="/profile" element={<Profile />}></Route>
+          <Route path="profile" element={<Profile />}></Route>
           <Route path="orders" element={<Orders />}></Route>
           <Route path="quotes" element={<Quotes />}></Route>
           <Route path="order_details/:orderId" element={<OrderDetails />} />

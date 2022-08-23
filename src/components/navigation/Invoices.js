@@ -15,9 +15,10 @@ export function Invoices(){
               </NavLink>
             </li>
           );
-        })}
-        <Outlet />
+        })} 
       </ul>
+      {/** The placeholder attribute */}
+      <div className="Outlet"><Outlet /></div>
     </>
   );
 };

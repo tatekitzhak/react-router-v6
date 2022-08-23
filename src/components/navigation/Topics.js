@@ -1,12 +1,12 @@
 import React from "react";
-import { NavLink, useRoutes, Outlet, useParams } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import Topic from '@/components/navigation/navLinks/Topic';
 import TopicsList from '@/components/navigation/navLinks/TopicsList';
-import NotFound from '@/components/pages/NotFound';
+import Subtopic from '@/components/navigation/navLinks/Subtopic';
 
 function Topics(props){
   let element = useRoutes([
-    { path: "/", element: <Topic /> },
+    { path: "/", element: <TopicsList /> },
     { path: "topic-1", element: <Topic path={"topic-1"} {...props}/>,
       children: [
         { path: "subtopic-1", element: <Subtopic path={"subtopic-1"}/> },
@@ -36,16 +36,6 @@ function Topics(props){
       {element}
     </div>
   );
-};
-
-function Subtopic(props){
-  return(
-    <>
-      <div>
-        <h3>{props.path} - Each topic branches off into subtopics</h3>
-      </div>
-    </>
-  )
 };
 
 export default Topics;
