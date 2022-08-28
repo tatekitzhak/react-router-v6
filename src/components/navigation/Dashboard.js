@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, NavLink, Route, useParams, useNavigate } from "react-router-dom";
+import { Routes, NavLink, Route, useParams, useNavigate, useLocation } from "react-router-dom";
 
 function Dashboard(){
   return (
@@ -31,7 +31,9 @@ export function Profile(){
   return <h2>Profile</h2>;
 };
 
-export function Orders(){
+export function Orders(props){
+  const location = useLocation();
+  console.log("Orders(props:",location)
   const orderIds = ["10001", "10002", "10003"];
   return (
     <>
@@ -58,10 +60,13 @@ export function OrderDetails(){
   const params = useParams();
   const navigate = useNavigate();
 
-  const onBackClick = (e) => {
+  const onBackClick = async (e) => {
     e.preventDefault();
-    // navigate(-1);
-    navigate("/dashboard/orders");
+    /* 
+      Navigate returns a promise so you can await it. It resolves after React is completely finished rendering the next screen, even with React Suspense.
+      navigate(-1); // You can pass a number to go to a previously visited route.
+     */
+    await navigate("/dashboard/orders",{ state: { id: 1, author_name: "Ran Itzhak" }, replace: true  });
   };
 
   return (
