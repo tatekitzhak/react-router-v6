@@ -51,22 +51,61 @@ export const routes = [
   { path: "/", element: <TopicsDashboard />,},
   { path: "topic-1", element: <Topic topic={"Topic-1"} />,
     children: [
-      { path: "subtopic-1", element: <Subtopic path={"subtopic-1"}/> },
-      { path: "subtopic-2", element: <Subtopic path={"subtopic-2"}/> },
+      { path: "subtopic-1", element: <Subtopic path={"subtopic-1"}/>,
+        children: [
+          { path: ":article", element: <p>article 1</p>}
+        ], 
+      },
+      { path: "subtopic-2", element: <Subtopic path={"subtopic-2"}/>,
+        children: [
+          { path: ":article", element: <p>article 2</p>}
+        ], 
+      },
+      { path: "subtopic-3", element: <Subtopic path={"subtopic-3"}/>,
+        children: [
+          { path: ":article", element: <p>article 3</p>}
+        ], 
+      },
     ], 
   },
   
   { path: "topic-2", element: <Topic topic={"Topic-2"}/>,
     children: [
-      { path: "subtopic-1", element: <Subtopic path={"subtopic-1"}/> },
-      { path: "subtopic-2", element: <Subtopic path={"subtopic-2"}/> },
+      { path: "subtopic-1", element: <Subtopic path={"subtopic-1"}/>,
+        children: [
+          { path: ":article", element: <p>article 1</p>}
+        ],
+      },
+      { path: "subtopic-2", element: <Subtopic path={"subtopic-2"}/>,
+        children: [
+          { path: ":article", element: <p>article 2</p>}
+        ],
+       },
+      { path: "subtopic-3", element: <Subtopic path={"subtopic-3"}/>,
+        children: [
+          { path: ":article", element: <p>article 3</p>}
+        ],
+      },
     ], 
   },
   {
     path: "topic-3",element: <Topic topic={"Topic-3"} />,
     children: [
-      { path: "subtopic-1", element: <Subtopic path={"subtopic-1"}/> },
-      { path: "subtopic-2", element: <Subtopic path={"subtopic-2"}/> },
+      { path: "subtopic-1", element: <Subtopic path={"subtopic-1"}/>,
+        children: [
+          { path: ":article", element: <p>article 1</p>}
+        ], 
+      },
+      { path: "subtopic-2", element: <Subtopic path={"subtopic-2"}/>,
+        children: [
+          { path: ":article", element: <p>article 2</p>}
+        ], 
+      },
+      { path: "subtopic-3", element: <Subtopic path={"subtopic-3"}/>,
+        children: [
+          { path: ":article", element: <p>article 3</p>}
+        ],
+      },
     ],
   }, 
   {

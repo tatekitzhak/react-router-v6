@@ -10,7 +10,7 @@ function TopicsRouter(props){
   const [authenticated, setAuthenticated] = useState(false);
   const routes = props.routes; 
   
-   let element = useRoutes(authenticated ? routes : []);
+   let childrenElement = useRoutes(authenticated ? routes : []);
   /* let element = useRoutes([
     { path: "/", element: <TopicsDashboard {...props}/>,},
     { path: "topic-1", element: <Topic topic={"Topic-1"} />,
@@ -57,7 +57,7 @@ function TopicsRouter(props){
        
       <TopicsList/>
       
-      {element}
+      {childrenElement}
       <h3>Recommended content ...</h3>
     </div>
   );

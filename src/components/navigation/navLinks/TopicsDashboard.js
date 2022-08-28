@@ -63,15 +63,15 @@ function TopicsDashboard(props) {
                 
             </div>
 
-            <div className="dashboard">
+           {/*  <div className="dashboard">
                 <Routes>
                     <Route path="topic-1/subtopic-1" element={<Subtopic path={"subtopic-1"}/>}></Route>
                     <Route path="topic-1/subtopic-2" element={<Subtopic path={"subtopic-2"}/>}></Route>
 
-                    {/* <Route path="order_details/:orderId" element={<OrderDetails />} /> */}
+                    <Route path="order_details/:orderId" element={<OrderDetails />} />
                    
                 </Routes>
-            </div>
+            </div> */}
         </div>
     );
 }

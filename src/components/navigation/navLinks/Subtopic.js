@@ -1,10 +1,11 @@
 import React from 'react';
-import { useSearchParams, useLocation, NavLink } from 'react-router-dom';
+import { useSearchParams, useLocation, NavLink , useParams, Outlet} from 'react-router-dom';
 
 function Subtopic(props) {
     const [searchParams] = useSearchParams();
     let location = useLocation();
-  console.log("Subtopic:",location); 
+    const params = useParams();
+  console.log("Subtopic params:",location, params); 
     return (
         <>
             <div>
@@ -20,6 +21,7 @@ function Subtopic(props) {
                         <NavLink to="article-3">Article 3</NavLink>
                     </li>
                 </ul>
+                <Outlet/>
             </div>
         </>
     );
