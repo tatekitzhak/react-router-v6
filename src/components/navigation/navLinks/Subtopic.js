@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSearchParams, useLocation } from 'react-router-dom';
+import { useSearchParams, useLocation, NavLink } from 'react-router-dom';
 
 function Subtopic(props) {
     const [searchParams] = useSearchParams();
@@ -8,7 +8,18 @@ function Subtopic(props) {
     return (
         <>
             <div>
-                <h3>{props.path} - Each topic branches off into subtopics</h3>
+                <h2>All subjects /{props.path}</h2>
+                <ul>
+                    <li>
+                        <NavLink to="article-1">Article 1</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="article-2">Article 2</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="article-3">Article 3</NavLink>
+                    </li>
+                </ul>
             </div>
         </>
     );

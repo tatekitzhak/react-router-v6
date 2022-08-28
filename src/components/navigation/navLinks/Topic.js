@@ -4,10 +4,11 @@ import { NavLink, Outlet, useParams } from "react-router-dom";
 
 function Topic(props){
     const { id } = useParams();
-    console.log("props:",props, id)
+    console.log("Topic:",props,id)
     return (
       <div className="subtopic">
-        <h1>{props.path}</h1>
+        
+        {props.topic ? <h1>{props.topic}</h1> : null}
         <ul>
           <li>
             <NavLink to="subtopic-1">Subtopic 1</NavLink>

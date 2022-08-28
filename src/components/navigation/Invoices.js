@@ -5,6 +5,8 @@ export function Invoices(){
   const invoiceIds = ["50001", "50002", "50003"];
   return (
     <>
+    {/** The placeholder */}
+    <div className="Outlet"><Outlet /></div>
       <h2>Invoices</h2>
       <ul className="invoices">
         {invoiceIds.map((invoiceId) => {
@@ -17,8 +19,7 @@ export function Invoices(){
           );
         })} 
       </ul>
-      {/** The placeholder attribute */}
-      <div className="Outlet"><Outlet /></div>
+      
     </>
   );
 };
