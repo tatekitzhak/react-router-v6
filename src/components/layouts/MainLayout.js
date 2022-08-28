@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Outlet } from "react-router-dom";
 
-function MainLayout() {
+function MainLayout(props) {
+    const [title, setTitle] = useState("MainLayout");
+    console.log("MainLayout(props:", props)
     return (
         <>
             <nav className="nav-bar">
+            <h1>MainLayout: {title}</h1>
                  <ul>
                      <li>
                          <Link to="/"> Home</Link>
@@ -21,7 +24,7 @@ function MainLayout() {
                  </ul>
             </nav>
             <div className="MainLayout">
-                <Outlet />
+            <Outlet context={{ setTitle }} />
             </div>
         </>
     );
