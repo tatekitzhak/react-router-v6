@@ -20,11 +20,7 @@ const root = document.getElementById("root");
 const view = createRoot(root);
 view.render(
     <BrowserRouter>
-        {useRoutesNestedElement()}
-        <React.StrictMode>
-            <App/>
-        </React.StrictMode>
-       
+        <App/>       
     </BrowserRouter>
     );
 

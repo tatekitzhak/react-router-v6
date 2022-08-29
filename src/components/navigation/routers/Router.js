@@ -1,7 +1,8 @@
 import loadable from "@loadable/component";
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import {routes} from '@/utils/menus';
+import { Route, Routes, NavLink } from "react-router-dom";
+import { routes } from '@/utils/menus';
+import Breadcrumbs from '@/components/navigation/navLinks/Breadcrumbs';
 import Header from '@/components/navigation/navLinks/Header';
 import Invoices, { Invoice } from "../Invoices";
 import TopicsDashboard from '@/components/navigation/navLinks/TopicsDashboard';
@@ -13,7 +14,7 @@ import Public from '@/components/pages/Public';
 import NotFound from '@/components/pages/NotFound';
 import Search from "../Search";
 
-function Loading(){
+function Loading() {
   return <div>Loading...</div>;
 };
 
@@ -22,19 +23,19 @@ const Dashboard = loadable(() => import("@/components/navigation/Dashboard"), {
 });
 
 function Router(props) {
-  console.log("Router:",routes)
+  console.log("Router:", routes)
   return (
     <div className="App">
-      <Header/>
-     
+      <Header />
+      <Breadcrumbs/>
       <div className="main">
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="about" element={<About />}></Route>
-          <Route path="topics/*" element={<TopicsRouter routes={routes}/>}>
+          <Route path="topics/*" element={<TopicsRouter routes={routes} />}>
             <Route index element={<p>Please select a Topic</p>} />
-            <Route path=":subtopic/*" element={<Topic {...props}/>} />
-          </Route>          
+            <Route path=":subtopic/*" element={<Topic {...props} />} />
+          </Route>
           <Route path="dashboard/*" element={<Dashboard />}></Route>
           <Route path="search" element={<Search />}></Route>
           <Route path="public" element={<Public />}></Route>

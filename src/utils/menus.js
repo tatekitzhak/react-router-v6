@@ -134,45 +134,43 @@ export const routes = [
 
 
 export function useRoutesNestedElement(){
-  const routes = [
-    { path: "/", element: <TopicsDashboard />,},
+  const copy_routes = [
     { path: "topic-1", element: <Topic topic={"Topic-1"} />,
       children: [
         { path: "subtopic-1", element: <Subtopic path={"subtopic-1"}/>,
           children: [
             { path: "article-1", element: <Article><div>article 1</div></Article>}
           ], 
-        },
-        { path: "subtopic-2", element: <Subtopic path={"subtopic-2"}/>,
-          children: [
-            { path: "article-2", element: <Article><div>article 2</div></Article>}
-          ], 
-        },
-        { path: "subtopic-3", element: <Subtopic path={"subtopic-3"}/>,
-          children: [
-            { path: "article-3", element: <Article><div>article 3</div></Article>}
-          ], 
-        },
+        }
       ], 
-    },
-    {
-      path: "*",element: <NotFound /> 
-    }, 
+    }
+  ];
+  const routes = [
+    { path: "topic-1", element: <Topic topic={"Topic-1"} />,
+      children: [
+        { path: "subtopic-1", element: <Subtopic path={"subtopic-1"}/>,
+          children: [
+            { path: "article-1", element: <Article><div>article 1</div></Article>}
+          ], 
+        }
+      ], 
+    }
   ]
-  console.table( routes)
-
+  
+  const menu_routes = [];
+  console.table( menu_routes)
   for(const k1 in routes) {
     if(typeof routes[k1] === 'object') {
+      console.log(`Parent ${k1}:`,routes[k1].path, routes[k1].element); // Assign the [ path: " ", element: <Topic topic={""} /> ]
       for(const k2 in routes[k1]) {
-        const parent = routes[k1][k2];
-        console.log(`Parent ${k1}:`,parent); // Assign the [ path: " ", element: <Topic topic={""} /> ]
-        if( parent.constructor === Array ){
-          for(const k3 in parent) {
-            console.log(`children1 ${k3}:`,parent[k3].path, parent[k3].element); // Assign the [path: "", element: <Subtopic path={"subtopic-3"}/>]
-            const children3 = parent[k3][k2]
-            if(parent.constructor === Array){
-              for(const k4 in children3)
-              console.log(`children2 ${k4}:`,children3[k4].path, children3[k4].element); // Assign the [path: "", element: <Article><div>article 3</div></Article>]
+        const first_children = routes[k1][k2];
+        if( routes[k1][k2].constructor === Array && routes[k1][k2].length ){
+          for(const k3 in routes[k1][k2]) {
+            console.log(`first_children ${k3}:`,(routes[k1][k2])[k3].path, (routes[k1][k2])[k3].element); // Assign the [path: "", element: <Subtopic path={"subtopic-3"}/>]
+            const second_children = (routes[k1][k2])[k3][k2]
+            if((routes[k1][k2])[k3][k2].constructor === Array && (routes[k1][k2])[k3][k2].length){
+              for(const k4 in (routes[k1][k2])[k3][k2])
+              console.log(`second_children ${k4}:`,((routes[k1][k2])[k3][k2])[k4].path, ((routes[k1][k2])[k3][k2])[k4].element); // Assign the [path: "", element: <Article><div>article 3</div></Article>]
             }
             
           }
@@ -182,5 +180,40 @@ export function useRoutesNestedElement(){
     } else {
       console.log(`not object ${key}:`,routes[key]);
     }
+    menu_routes.push(routes)
   }
+  console.table( menu_routes)
 }
+/* 
+const topicElement = document.createElement("div");
+topicElement.id = "topic";
+topicElement.innerText = 'Topic'
+
+
+
+const subtopicElement = document.createElement("section");
+subtopicElement.id = "subtopic";
+subtopicElement.innerText = 'Subtopic';
+
+const articleElement = document.createElement("article");
+articleElement.id = "article";
+articleElement.innerText = 'Article';
+
+
+
+const arr1 = [] ;
+const routes = { path: "topic", element: topicElement,
+                 children: [
+                    { path: "subtopic", element: subtopicElement,
+                      children: [
+                        { path: "article", element: articleElement}
+                      ], 
+                    }
+                  ], 
+                };
+
+arr1.push(routes)
+
+console.log("routes:",routes)
+console.log("arr1:",arr1) 
+*/
