@@ -5,6 +5,7 @@ import App from "@/App";
 
 // Test import of a JavaScript module
 import { example } from '@/js/example';
+import {useRoutesNestedElement} from '@/utils/menus';
 
 // Test import of an asset
 import webpackLogo from '@/assets/images/webpack-logo.svg'
@@ -19,7 +20,11 @@ const root = document.getElementById("root");
 const view = createRoot(root);
 view.render(
     <BrowserRouter>
-        <App/>
+        {useRoutesNestedElement()}
+        <React.StrictMode>
+            <App/>
+        </React.StrictMode>
+       
     </BrowserRouter>
     );
 

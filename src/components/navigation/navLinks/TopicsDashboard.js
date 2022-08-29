@@ -7,13 +7,12 @@ function TopicsDashboard(props) {
     console.log("TopicsDashboard:",props)
     return (
         <div>
-            <h2>The Topics dashboard shows an all Topics and subtopics( Topics drill down view)</h2>
-            <p>Please select a Topic</p>
+            <p>The Topics dashboard view, please select a Topic</p>
             {/* <Topic/> */}
 
             <div className="subtopic">
 
-                {props.topic ? <h1>{props.topic}</h1> : null}
+                {props.topic ? <h3>{props.topic}</h3> : null}
                 <nav>
                 <ul>
                     <li>

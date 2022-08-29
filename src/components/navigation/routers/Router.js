@@ -33,7 +33,7 @@ function Router(props) {
           <Route path="about" element={<About />}></Route>
           <Route path="topics/*" element={<TopicsRouter routes={routes}/>}>
             <Route index element={<p>Please select a Topic</p>} />
-            <Route path=":topic_type/*" element={<Topic {...props}/>} />
+            <Route path=":subtopic/*" element={<Topic {...props}/>} />
           </Route>          
           <Route path="dashboard/*" element={<Dashboard />}></Route>
           <Route path="search" element={<Search />}></Route>

@@ -8,7 +8,7 @@ function Topic(props) {
   return (
     <div className="subtopic">
 
-      {props.topic ? <h1>{props.topic}</h1> : null} 
+      Title name:{props.topic ? <h1>{props.topic}</h1> : null} 
       <ul>
         <li>
           <NavLink to="subtopic-1">Subtopic 1</NavLink>

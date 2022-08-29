@@ -9,7 +9,7 @@ function Subtopic(props) {
     return (
         <>
             <div>
-                <h2>All subjects /{props.path}</h2>
+                <h2>Title name: {props.path}</h2>
                 <ul>
                     <li>
                         <NavLink to="article-1">Article 1</NavLink>
