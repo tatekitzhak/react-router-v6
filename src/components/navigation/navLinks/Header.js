@@ -42,8 +42,8 @@ function Header(props) {
                     </li>
                     <li>
                         <NavLink 
-                            to="/home" 
-                            style={({isActive}) => ({color: isActive ? 'blue' : 'black'})} 
+                            to="/contact" 
+                            style={({isActive}) => ({color: isActive ? 'green' : 'black'})} 
                             className={({isActive}) => `nav_link${isActive ? " active" : ""}`} >Contact Us 
                         </NavLink>
                     </li>

@@ -13,7 +13,11 @@ import About from '@/components/pages/About';
 import Public from '@/components/pages/Public';
 import NotFound from '@/components/pages/NotFound';
 import Search from "../Search";
-
+/**
+ * https://www.codingdeft.com/posts/react-router-tutorial/
+ * https://github.com/collegewap/react-router-tutorial
+ * https://react-router-tutorial.vercel.app/
+ */
 function Loading() {
   return <div>Loading...</div>;
 };

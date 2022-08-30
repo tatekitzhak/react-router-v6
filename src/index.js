@@ -5,6 +5,7 @@ import App from "@/App";
 
 // Test import of a JavaScript module
 import { example } from '@/js/example';
+import { apiPosts, apiCommentsOostId, apiMultipleConcurrentRequests, apiRequestRemoteImage, axiosCreateInstance } from '@/api/axios';
 import {useRoutesNestedElement} from '@/utils/menus';
 
 // Test import of an asset
@@ -20,6 +21,7 @@ const root = document.getElementById("root");
 const view = createRoot(root);
 view.render(
     <BrowserRouter>
+    {/* {axiosCreateInstance()} */}
         <App/>       
     </BrowserRouter>
     );
