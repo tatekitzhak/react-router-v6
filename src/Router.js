@@ -7,6 +7,7 @@ import SideBarNavList from '@/components/sideBarMenu/SideBarNavList'
 import Home from '@/components/pages/home';
 import About from '@/components/pages/About';
 import Contact from '@/components/pages/Contact';
+import Counter from '@/components/pages/Counter';
 import TopicsList from '@/components/pages/TopicsList';
 import NotFound from '@/components/pages/NotFound';
 //import Footer from './components/pages/footer';
@@ -49,8 +50,9 @@ function Router(props) {
             <Routes>
                  {/* Routes for Header Nav Bar List (Routes for everyone ) */}
                 <Route path={'/'} element={<Home />} />
-                <Route path={'about'} element={<About />} />
+                <Route path={'about'} element={<About id={5}/>} />
                 <Route path={'contact'} element={<Contact />} />
+                <Route path={'counter'} element={<Counter />} />
                 <Route path={'page-not-found'} element={<NotFound />} />
                 <Route path={"/:not_found"} 
                        element={<Navigate to={ menu ? "/" : '/page-not-found'}/>}

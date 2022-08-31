@@ -21,12 +21,12 @@ function SideBarNavList(props) {
                         <NavLink
                             to="topic1"
                             style={({ isActive }) =>
-                                isActive ? activeStyle : undefined
-                            }
+                                    isActive ? activeStyle : undefined
+                                    }
                             className={({ isActive }) => {
-                                return isActive ? activeClassName : undefined
-                            }
-                            }
+                                        return isActive ? activeClassName : undefined
+                                        }
+                                      }
                         >
                             Topic1
                     </NavLink>

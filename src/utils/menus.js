@@ -24,6 +24,12 @@ export const header_menu = [
     title: "Contact Us",
     to: "contact",
     items: [] //children
+  },
+  {
+    icon: <p>Counter</p>,
+    title: "Counter",
+    to: "counter",
+    items: [] //children
   }
 ];
 export const sidebar_menu = [
