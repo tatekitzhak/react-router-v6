@@ -21,7 +21,6 @@ console.log('store:',store)
 const root = document.getElementById("root");
 const view = createRoot(root);
 
-console.log("counterReducer:", store.getState())
 view.render(
     <Provider store={store}>
         <BrowserRouter>

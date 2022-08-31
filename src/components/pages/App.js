@@ -59,7 +59,6 @@ function App(props) {
     }, [menu]);
   
     let {params} = useParams();
-    console.log("App:", params)
     return (
         <>
             <HeaderNavList>

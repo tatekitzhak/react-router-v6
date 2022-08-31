@@ -8,6 +8,9 @@ import Home from '@/components/pages/home';
 import About from '@/components/pages/About';
 import Contact from '@/components/pages/Contact';
 import Counter from '@/components/pages/Counter';
+import TwoContainer from '@/components/pages/TwoContainer';
+import FiveContainer from '@/components/pages/FiveContainer';
+
 import TopicsList from '@/components/pages/TopicsList';
 import NotFound from '@/components/pages/NotFound';
 //import Footer from './components/pages/footer';
@@ -41,7 +44,6 @@ function Router(props) {
     }, [menu]);
   
     let {params} = useParams();
-    console.log("App:", params)
     return (
         <>
             <HeaderNavList>
@@ -53,6 +55,8 @@ function Router(props) {
                 <Route path={'about'} element={<About id={5}/>} />
                 <Route path={'contact'} element={<Contact />} />
                 <Route path={'counter'} element={<Counter />} />
+                <Route path={'fiveContainer'} element={<FiveContainer />} />
+                <Route path={'twoContainer'} element={<TwoContainer />} />
                 <Route path={'page-not-found'} element={<NotFound />} />
                 <Route path={"/:not_found"} 
                        element={<Navigate to={ menu ? "/" : '/page-not-found'}/>}

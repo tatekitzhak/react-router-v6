@@ -1,3 +1,8 @@
+import { combineReducers } from 'redux';
+import { incReducer } from '@/store/reducers/typsCounters/incReducer.js';
+import { decReducer } from '@/store/reducers/typsCounters/decReducer.js';
+
+
 const initState = {
     posts: [
         {
@@ -43,31 +48,36 @@ const initialCount = {
     count: 0
 };
 
-export const rootReducer = (state = initState, action) => {
-    return state;
-}
+// export const rootReducer = (state = initState, action) => {
+//     return state;
+// }
 
-export const counterReducer = (state = initialCount, action) => {
+// export const counterReducer = (state = initialCount, action) => {
     
-    switch (action.type) {
-        case "INC":
-            return {
-                ...state,
-                count: state.count + 1
-            };
-        case "DEC":
-            return {
-                ...state,
-                count: state.count - 1
-            };
-        case "RESET":
-            return {
-                ...state,
-                count: 0
-            };
-        default:
-            return state;
-    }
+//     switch (action.type) {
+//         case "INC":
+//             return {
+//                 ...state,
+//                 count: state.count + 1
+//             };
+//         case "DEC":
+//             return {
+//                 ...state,
+//                 count: state.count - 1
+//             };
+//         case "RESET":
+//             return {
+//                 ...state,
+//                 count: 0
+//             };
+//         default:
+//             return state;
+//     }
 
-}
+// }
 
+
+export const rootReducer = combineReducers({
+    increment: incReducer,
+    decrement: decReducer,
+});
