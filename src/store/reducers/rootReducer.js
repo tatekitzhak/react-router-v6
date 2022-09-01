@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { incReducer } from '@/store/reducers/typsCounters/incReducer.js';
-import { decReducer } from '@/store/reducers/typsCounters/decReducer.js';
+import { increment } from '@/store/reducers/typsCounters/incReducer.js';
+import { decrement } from '@/store/reducers/typsCounters/decReducer.js';
 
 
 const initState = {
@@ -78,6 +78,6 @@ const initialCount = {
 
 
 export const rootReducer = combineReducers({
-    increment: incReducer,
-    decrement: decReducer,
+    increment,
+    decrement,
 });

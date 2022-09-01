@@ -3,7 +3,7 @@ const initialState = {
     decrValue: -1
 };
 
-export const decReducer = (state = initialState, action) => {
+export const decrement = (state = initialState, action) => {
     console.log("decReducer action:", action)
     switch (action.type) {
         case "DEC":

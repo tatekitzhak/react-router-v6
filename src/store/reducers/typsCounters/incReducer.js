@@ -3,7 +3,7 @@ const initialState = {
     incrValue: 1
 };
 
-export const incReducer = (state = initialState, action) => {
+export const increment = (state = initialState, action) => {
     console.log("incReducer action:", action.payload)
 
     switch (action.type) {

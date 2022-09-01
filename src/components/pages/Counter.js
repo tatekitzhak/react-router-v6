@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 import { increment, decrement, reset, addNumber } from '@/store/actions/actions';
 
@@ -65,11 +66,16 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
+    /* return {
         decrement: () => dispatch(decrement()),
         increment: () => dispatch(increment()),
         reset: (ownValue) => dispatch(reset(ownValue)),
-        addNumber: (stateValue) => dispatch(addNumber(stateValue))
-    }
+        addNumber: (stateValue) => dispatch(addNumber(stateValue)),
+        dispatch,
+    } */
+    return {
+        dispatch,
+        ...bindActionCreators({ increment, decrement, reset, addNumber }, dispatch),
+      }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
