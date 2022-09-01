@@ -4,7 +4,7 @@ const initialState = {
 };
 
 export const incReducer = (state = initialState, action) => {
-    console.log("incReducer action:", action)
+    console.log("incReducer action:", action.payload)
 
     switch (action.type) {
         case "INC":
@@ -12,6 +12,11 @@ export const incReducer = (state = initialState, action) => {
                 ...state,
                 incrValue: state.incrValue + 1
             };
+        case "ADD":
+            return {
+                ...state,
+                incrValue: state.incrValue + action.payload
+            }
         case "RESET":
             return {
                 ...state,
