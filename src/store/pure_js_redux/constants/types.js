@@ -12,6 +12,11 @@ export const counter = {
     INCREMENT: 'INCREMENT',
     ADD: 'ADD'
 }
+//Product app
+export const product = {
+    CHANGE_USER_EMAIL: "CHANGE_USER_EMAIL",
+    ADD_PRODUCT: "ADD_PRODUCT"
+}
 
 // Comments
 export const ADD_COMMENT = 'ADD_COMMENT';
