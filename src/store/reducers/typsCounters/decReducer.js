@@ -1,3 +1,4 @@
+import { DEC_NUM, RESET } from '@/store/constants/actionTypes';
 // The reducer updates the count
 const initialState = {
     decrValue: -1
@@ -6,12 +7,12 @@ const initialState = {
 export const decrement = (state = initialState, action) => {
     console.log("decReducer action:", action)
     switch (action.type) {
-        case "DEC":
+        case DEC_NUM:
             return {
                 ...state,
                 decrValue: state.decrValue - 1
             };
-        case "RESET":
+        case RESET:
             return {
                 ...state,
                 decrValue: 0

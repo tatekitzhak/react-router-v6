@@ -57,15 +57,16 @@ function Counter(props) {
     );
 }
 
-const mapStateToProps = (state) => {
-    console.log('mapStateToProps:', state)
+const mapStateToProps = (state, ownProps) => {
+    console.log('mapStateToProps:', ownProps)
     return {
         countValue: state.increment.incrValue,
         decValue: state.decrement.decrValue,
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
+    console.log('mapDispatchToProps:', ownProps)
     /* return {
         decrement: () => dispatch(decrement()),
         increment: () => dispatch(increment()),

@@ -54,7 +54,7 @@ function Router(props) {
                 <Route path={'/'} element={<Home />} />
                 <Route path={'about'} element={<About id={5}/>} />
                 <Route path={'contact'} element={<Contact />} />
-                <Route path={'counter'} element={<Counter />} />
+                <Route path={'counter'} element={<Counter path={'counter'}/>} />
                 <Route path={'fiveContainer'} element={<FiveContainer />} />
                 <Route path={'twoContainer'} element={<TwoContainer />} />
                 <Route path={'page-not-found'} element={<NotFound />} />
