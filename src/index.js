@@ -4,7 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import Router from "@/Router";
 import Container from "@/components/pages/container";
-import store from '@/store/index';
+import store from '@/store/connect_mapState_mapDispatch/index';
+import store_test from '@/store/pure_js_redux/index';
 
 // Test import of a JavaScript module
 import { example } from '@/js/example'

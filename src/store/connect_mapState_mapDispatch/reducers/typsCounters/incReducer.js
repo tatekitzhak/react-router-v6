@@ -1,4 +1,4 @@
-import { INC_NUM ,DEC_NUM, ADD_NUMBER, RESET } from '@/store/constants/actionTypes';
+import { INC_NUM ,DEC_NUM, ADD_NUMBER, RESET } from '@/store/connect_mapState_mapDispatch/constants/actionTypes';
 
 // The reducer updates the count
 const initialState = {

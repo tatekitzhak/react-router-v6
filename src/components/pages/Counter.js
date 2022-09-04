@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
-import { increment, decrement, reset, addNumber } from '@/store/actions/actions';
+import { increment, decrement, reset, addNumber } from '@/store/connect_mapState_mapDispatch/actions/actions';
 
 /**
  * https://daveceddia.com/redux-mapdispatchtoprops-object-form/

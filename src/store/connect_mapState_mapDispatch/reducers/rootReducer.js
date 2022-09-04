@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { increment } from '@/store/reducers/typsCounters/incReducer.js';
-import { decrement } from '@/store/reducers/typsCounters/decReducer.js';
+import { increment } from '@/store/connect_mapState_mapDispatch/reducers/typsCounters/incReducer.js';
+import { decrement } from '@/store/connect_mapState_mapDispatch/reducers/typsCounters/decReducer.js';
 
 
 const initState = {
