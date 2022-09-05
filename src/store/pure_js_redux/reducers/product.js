@@ -10,31 +10,6 @@ const initialState = {
       products: []
     }
   };
-  
-  const productReducer = (state = initialState, action) => {
-    console.log('productReducer (state, action):', state, action)
-
-    if (action.type === types.product.CHANGE_USER_EMAIL) {
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          email: action.payload.email
-        }
-      };
-    }
-    if (action.type === types.product.ADD_PRODUCT) {
-      return {
-        ...state,
-        cart: {
-          ...state.cart,
-          products: [...state.cart.products, action.payload.product]
-        } 
-      };
-    }
-    return state;
-  };
-
 
   const userReducer = (user = initialState.user, action) => {
     if (action.type === types.product.CHANGE_USER_EMAIL) {
