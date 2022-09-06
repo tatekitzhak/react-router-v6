@@ -18,7 +18,7 @@ const netRequest = () => {
     console.log("Network Request");
 };
 
-function FiveContainer() {
+function SelectorAndDispatch() {
     const [count, setCount] = useState(0);
     const [fruit, updateFruit] = useState("apple");
     const styles = { border: '1px solid #fff'};
@@ -78,4 +78,4 @@ function FiveContainer() {
     );
 }
 
-export default FiveContainer;
+export default SelectorAndDispatch;

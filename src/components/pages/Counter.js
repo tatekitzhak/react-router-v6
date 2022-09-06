@@ -58,10 +58,10 @@ function Counter(props) {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log('mapStateToProps:', ownProps)
+    console.log('mapStateToProps:', state)
     return {
-        countValue: state.increment.incrValue,
-        decValue: state.decrement.decrValue,
+        countValue: state.increment,
+        decValue: state.decrement,
     }
 }
 

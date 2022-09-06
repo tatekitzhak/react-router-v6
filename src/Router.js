@@ -8,8 +8,8 @@ import Home from '@/components/pages/home';
 import About from '@/components/pages/About';
 import Contact from '@/components/pages/Contact';
 import Counter from '@/components/pages/Counter';
-import TwoContainer from '@/components/pages/TwoContainer';
-import FiveContainer from '@/components/pages/FiveContainer';
+import UseSelectorAndDispatch2 from '@/components/pages/UseSelectorAndDispatch2';
+import SelectorAndDispatch from '@/components/pages/SelectorAndDispatch';
 
 import TopicsList from '@/components/pages/TopicsList';
 import NotFound from '@/components/pages/NotFound';
@@ -55,8 +55,8 @@ function Router(props) {
                 <Route path={'about'} element={<About id={5}/>} />
                 <Route path={'contact'} element={<Contact />} />
                 <Route path={'counter'} element={<Counter path={'counter'}/>} />
-                <Route path={'fiveContainer'} element={<FiveContainer />} />
-                <Route path={'twoContainer'} element={<TwoContainer />} />
+                <Route path={'selectorAndDispatch'} element={<SelectorAndDispatch />} />
+                <Route path={'useSelectorAndDispatch2'} element={<UseSelectorAndDispatch2 />} />
                 <Route path={'page-not-found'} element={<NotFound />} />
                 <Route path={"/:not_found"} 
                        element={<Navigate to={ menu ? "/" : '/page-not-found'}/>}
