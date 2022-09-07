@@ -7,7 +7,8 @@ import Container from "@/components/pages/container";
 // import store from '@/store/connect_mapState_mapDispatch/index';
 // import store_test from '@/store/pure_js_redux/index';
 // import store1 from '@/store/useSelector_useDispatch/index';
-import store2 from '@/store/useSelector_useDispatch2/index';
+//import store2 from '@/store/useSelector_useDispatch2/index';
+import store_logger from '@/store/home-redux-logger/index';
 
 // Test import of a JavaScript module
 import { example } from '@/js/example'
@@ -19,13 +20,13 @@ import webpackLogo from '@/images/webpack-logo.svg'
 import '@/styles/index.scss';
 import '@/styles/index.css';
  
-console.log('store2:',store2)
+console.log('store_logger:',store_logger)
  
 const root = document.getElementById("root");
 const view = createRoot(root);
 
 view.render(
-    <Provider store={store2}>
+    <Provider store={store_logger}>
         <BrowserRouter>
             <Router />
         </BrowserRouter>
