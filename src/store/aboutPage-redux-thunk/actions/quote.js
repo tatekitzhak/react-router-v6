@@ -1,19 +1,19 @@
 // quote.js
 import axios from 'axios';
 
-const setQuoteData = (content) => {
+const setQuoteDataAction = (content) => {
 	return {
 		type: "SET_QUOTE_DATA",
 		content
 	}
 }
 
-const fetchQuote = () => {
+const fetchQuoteAction = () => {
 	return (dispatch) => {
 		return axios.get('https://movie-quote-api.herokuapp.com/v1/quote/').then(response => {
 			if(response.status === 200) {
 				dispatch(
-					setQuoteData({
+					setQuoteDataAction({
 						quote: response.data.quote,
 						role: response.data.role
 					})
@@ -25,6 +25,6 @@ const fetchQuote = () => {
 
 
 export {
-	setQuoteData,
-	fetchQuote
+	setQuoteDataAction,
+	fetchQuoteAction
 }

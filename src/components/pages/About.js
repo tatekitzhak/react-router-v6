@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDogImage } from '@/store/aboutPage-redux-thunk/actions/dog';
-import { fetchQuote } from '@/store/aboutPage-redux-thunk/actions/quote';
+import { fetchDogImageAction } from '@/store/aboutPage-redux-thunk/actions/dog';
+import { fetchQuoteAction } from '@/store/aboutPage-redux-thunk/actions/quote';
 
 function About() {
     const dogData = useSelector(state => state.dog);
@@ -10,10 +10,10 @@ function About() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchDogImage());
-        dispatch(fetchQuote());
+        dispatch(fetchDogImageAction());
+        dispatch(fetchQuoteAction());
         console.log('quoteData', quoteData);
-    }, []);
+    }, [dispatch]);
     return (
         <div>
             About
