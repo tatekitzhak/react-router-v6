@@ -217,3 +217,46 @@ arr1.push(routes)
 console.log("routes:",routes)
 console.log("arr1:",arr1) 
 */
+
+/*
+
+let arr1 = [] ;
+
+ let topic = { path: 'topic', 
+               element: 'div' 
+             };
+ let children1 = [
+                  { path: "article", 
+                    element: 'articleElement'
+                  }
+                ];
+
+for(let i=1; i<=3; i++){
+    let topic = {};
+    topic.path = `topic-${i}`;
+    topic.element = 'DIV';
+
+    let children_subtopic = [];
+    for(let j=1; j<=4; j++){
+      let subtopic = {};
+        subtopic.path = `subtopic-${j}`;
+        subtopic.element = 'SECTION';
+        children_subtopic.push(subtopic)
+        
+        let children_article = [];
+        for(k=1; k<=5; k++){
+            let article = {};
+            article.path = `article-${k}`;
+            article.element = 'ARTICLE';
+            children_article.push(article)
+        }
+        subtopic.children = children_article;
+    }
+    topic.children = children_subtopic;
+    arr1.push(topic)
+}
+
+// let cloneObj = Object.assign({}, topic);
+// cloneObj.children = children1;
+console.log(arr1);
+ */

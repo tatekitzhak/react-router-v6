@@ -4,15 +4,15 @@ import { Route, Routes, NavLink } from "react-router-dom";
 import { routes } from '@/utils/menus';
 import Breadcrumbs from '@/components/navigation/navLinks/Breadcrumbs';
 import Header from '@/components/navigation/navLinks/Header';
-import Invoices, { Invoice } from "../Invoices";
+import Invoices, { Invoice } from "../navigation/Invoices";
 import TopicsDashboard from '@/components/navigation/navLinks/TopicsDashboard';
-import TopicsRouter from '@/components/navigation/TopicsRouter';
+import TopicsRouter from '@/components/routers/TopicsRouter';
 import Topic from '@/components/navigation/navLinks/Topic';
 import Home from '@/components/pages/Home';
 import About from '@/components/pages/About';
 import Public from '@/components/pages/Public';
 import NotFound from '@/components/pages/NotFound';
-import Search from "../Search";
+import Search from "../navigation/Search";
 /**
  * https://www.codingdeft.com/posts/react-router-tutorial/
  * https://github.com/collegewap/react-router-tutorial
