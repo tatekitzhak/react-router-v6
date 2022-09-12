@@ -34,9 +34,30 @@ export const posts = {
     UPDATE_LINKS: 'letters-social/post/paginate/update'
 };
 
-export const comments = {
-    CREATE: 'letters-social/comments/create',
-    GET: 'letters-social/comments/get',
-    SHOW: 'letters-social/comments/show',
-    TOGGLE: 'letters-social/comments/toggle'
+export const topics = {
+    CREATE: '/topics/create',
+    GET: '/topics/get',
+    SHOW: '/topics/show',
+    TOGGLE: '/topics/toggle'
 };
+
+export const subtopic = {
+    CREATE: '/subtopics/create',
+    GET: '/subtopics/get',
+    SHOW: '/subtopics/show',
+    TOGGLE: '/subtopics/toggle'
+};
+
+export const articles = {
+    CREATE: '/articles/create',
+    GET: '/articles/get',
+    SHOW: '/articles/show',
+    TOGGLE: '/articles/toggle'
+};
+export const contents = {
+    CREATE: '/contents/create',
+    GET: '/contents/get',
+    SHOW: '/contents/show',
+    TOGGLE: '/contents/toggle'
+};
+

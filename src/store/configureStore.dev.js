@@ -1,4 +1,4 @@
-// import thunk from 'redux-thunk';
+import thunk from 'redux-thunk';
 import { createStore, compose, applyMiddleware } from 'redux';
 import rootReducer from '@/store/reducers/rootReducer';
 
@@ -24,17 +24,15 @@ export default initialState => {
 let store;
 
 export default (initialState, confType) => {
-    console.log('configureStore.dev:', initialState, confType)
     if (store) {
         return store;
     }
     const createdStore = createStore(rootReducer,
-       /*  compose(
+        compose(
             applyMiddleware(
                 thunk,
-            ),
-            window.devToolsExtension()
-        ) */
+            )
+        )
     );
     store = createdStore;
     return store;

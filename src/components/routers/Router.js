@@ -27,7 +27,6 @@ const Dashboard = loadable(() => import("@/components/navigation/Dashboard"), {
 });
 
 function Router(props) {
-  console.log("Router:", routes)
   return (
     <div className="App">
       <Header />

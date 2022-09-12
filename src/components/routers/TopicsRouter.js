@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useRoutes, Outlet } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux'
+
 import TopicsDashboard from '@/components/navigation/navLinks/TopicsDashboard';
 import Topic from '@/components/navigation/navLinks/Topic';
 import TopicsList from '@/components/navigation/navLinks/TopicsList';
 import Subtopic from '@/components/navigation/navLinks/Subtopic';
 import NotFound from '@/components/pages/NotFound';
 
+import { getTopics } from '@/store/actions/topics';
+import { getSubtopics } from '@/store/actions/subtopics';
+import { getArticles } from '@/store/actions/article';
+
 function TopicsRouter(props){
+  const dispatch = useDispatch()
   const [authenticated, setAuthenticated] = useState(false);
   const routes = props.routes; 
   
@@ -39,18 +46,13 @@ function TopicsRouter(props){
   ]); */
 
   useEffect(() => {
-    // axios.get(`/api/checkingAuthenticated`)
-    //   .then(res => {
-    //     if (res.status === 200) {
-    //       setAuthenticated(true);
-    //     }
-    //     setLoading(false);
-    //   });
+    dispatch( getTopics() );
+    dispatch( getSubtopics() );
+    dispatch( getArticles() );
     
-   
       setAuthenticated(true);
     
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

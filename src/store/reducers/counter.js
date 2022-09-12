@@ -10,7 +10,7 @@ import initialState from '@/store/constants/initialState';
 const counter = (store = initialState.counter, action) => {
     console.log('counter = (store, action):',(store ,action))
     switch (action.type) {
-        case ACTION_INCREMENT:
+        case 'ACTION_INCREMENT':
             return {
                 ...store,
                 counter: store.counter + 1

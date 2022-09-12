@@ -4,7 +4,6 @@ import Subtopic from '@/components/navigation/navLinks/Subtopic';
 import Topic from '@/components/navigation/navLinks/Topic';
 
 function TopicsDashboard(props) {
-    console.log("TopicsDashboard:",props)
     return (
         <div>
             <p>The Topics dashboard view, please select a Topic</p>

@@ -9,15 +9,18 @@ import store from '@/store/configureStore.dev';
 import { apiPosts, apiCommentsOostId, apiMultipleConcurrentRequests, apiRequestRemoteImage, axiosCreateInstance } from '@/api/axios';
 import {useRoutesNestedElement} from '@/utils/menus';
 
-// Test import of an asset
+// Import of an asset
 import webpackLogo from '@/assets/images/webpack-logo.svg'
 
-
-// Test import of styles
+// Import of styles
 import '@/styles/index.scss';
- 
+
+// Tests
 console.log('store:',store())
- 
+
+
+
+// --- Render on the DOM ---
 const root = document.getElementById("root");
 const view = createRoot(root);
 view.render(

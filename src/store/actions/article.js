@@ -1,6 +1,24 @@
-//...
+import axios from "axios";
 
-export function createNewPost(post) {
+import * as types from '@/store/constants/types';
+/* 
+import * as API from '../shared/http';
+import { createError } from './error';
+import { getCommentsForPost } from './comments';
+ */
+
+/* 
+    Actions
+*/
+
+export function updateAvailableArticles(articles) {
+    return {
+        type: types.articles.GET,
+        articles
+    };
+}
+
+/* export function createNewPost(post) {
     return (dispatch, getState) => {
         const { user } = getState();
         post.userId = user.id;
@@ -15,7 +33,7 @@ export function createNewPost(post) {
             .catch(err => dispatch(createError(err)));
     };
 }
-   export function getPostsForPage(page = 'first') {
+export function getPostsForPage(page = 'first') {
     return (dispatch, getState) => {
         const { pagination } = getState();
         const endpoint = pagination[page];
@@ -41,6 +59,20 @@ export function loadPost(postId) {
             .catch(err => dispatch(createError(err)));
     };
 }
-
+ */
+export function getArticles() {
+    return dispatch => {
+        //return API.fetchCommentsForPost(postId)
+        return axios.get("https://jsonplaceholder.typicode.com/comments")
+            .then(res => {
+                console.log('getArticles:', res.data)
+                return  dispatch(updateAvailableArticles(res.data))
+            })
+            .catch(err => {
+                console.log('err getArticles:', err)
+                return // dispatch(createError(err))
+            });
+    };
+}
 
 
