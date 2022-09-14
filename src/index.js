@@ -16,8 +16,28 @@ import webpackLogo from '@/assets/images/webpack-logo.svg'
 import '@/styles/index.scss';
 
 // Tests
-console.log('store:',store())
+console.log('store:',store() )
+////
+/**
+ * https://balajisblog.com/environment-variables-in-react/
+ * 
+ "scripts": {
+  "dev": "cross-env NODE_ENV=dev node index.js",
+  "prod": "cross-env NODE_ENV=prod node index.js",
+  "error": "cross-env NODE_ENV=dev && node index.js"
+}
 
+ */
+
+let baseURL = '';
+if (process.env.NODE_ENV == 'development') {
+    console.log('process.env.NODE_ENV:',process.env.NODE_ENV )
+  baseURL = 'sampleapi.com/end-point';
+} else if (process.env.NODE_ENV == 'production') {
+  baseURL = 'productionapi.com/end-point';
+} else {
+  baseURL = 'sampleapi.com/end-point';
+}
 
 
 // --- Render on the DOM ---
